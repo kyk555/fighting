@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/C:/gradle_dev/Android-Gradle-Examples/Gradle%20Hello%20World/src/main/res/values-v14/styles.xml -->
+    <eat-comment />
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar" />
+
+</resources>

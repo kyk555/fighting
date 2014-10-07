@@ -1,0 +1,24 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:0.8.+'
+	}
+}
+
+apply plugin: 'android'
+
+//指定gradle Wrapper使用的 gradle版本号
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.10'
+}
+
+android {
+	compileSdkVersion 19
+	buildToolsVersion "19.1.0"
+	
+	defaultConfig {
+		targetSdkVersion 19
+	}
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res" >
+            <file
+                name="ic_action_search"
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\drawable-hdpi\ic_action_search.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\drawable-hdpi\ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_action_search"
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\drawable-mdpi\ic_action_search.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\drawable-mdpi\ic_launcher.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_action_search"
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\drawable-xhdpi\ic_action_search.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="activity_main"
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\layout\activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main"
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\menu\activity_main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\values\strings.xml"
+                qualifiers="" >
+                <string name="title_activity_main" >MainActivity
+                </string>
+                <string name="app_name" >Gradle Hello World
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="menu_settings" >Settings
+                </string>
+            </file>
+            <file
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\values\styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Light" />
+            </file>
+            <file
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\values-v11\styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Holo.Light" />
+            </file>
+            <file
+                path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\main\res\values-v14\styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" />
+            </file>
+        </source>
+        <source path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\build\res\rs\debug" />
+        <source path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\build\res\generated\debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="C:\gradle_dev\Android-Gradle-Examples\Gradle Hello World\src\debug\res" />
+    </dataSet>
+
+</merger>
