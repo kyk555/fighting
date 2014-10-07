@@ -1,0 +1,114 @@
+task hello{
+	doLast{
+		//Groovy code
+		println 'Hello world!'
+	}
+}
+
+hello.doFirst {
+    println 'Hello Venus'
+}
+hello.doLast {
+    println 'Hello Mars'
+}
+// << 操作符是doLast的别名
+hello << {
+    println 'Hello Jupiter'
+}
+
+
+hello.doLast {
+    println "Greetings from the $hello.name task."
+}
+
+task hello1 << { println 'Hello world 1!'}
+
+
+
+task upper << {
+
+	String someString ='MY_AAA'
+	println "Original :" + someString
+	println "Upper case: " + someString.toUpperCase() 
+
+}
+
+task count << {
+	// $it 表示当前迭代次数
+    4.times { print "$it "}
+}
+
+
+task intro(dependsOn: hello) << {
+    println "I'm Gradle"
+}
+
+//依赖懒加载
+task taskX(dependsOn: 'taskY') << { 
+    println 'taskX'
+}
+task taskY << {
+    println 'taskY'
+}
+
+//动态任务,->闭包
+4.times { counter ->
+    task "task$counter"   << { 
+        println "I'm task number $counter"
+    }
+}
+task0.dependsOn task2, task3
+
+
+
+
+task myTask {
+	//任务扩展属性/自定义属性定义
+    ext.myProperty = "myValue"
+}
+task printTaskProperties << {
+	//task扩展属性访问
+    println myTask.myProperty
+}
+//定义默认task
+defaultTasks 'printTaskProperties'
+
+task distribution << {
+    println "We build the zip with version=$version"
+}
+task release(dependsOn:  'distribution') << { 
+    println 'We release now'
+}
+gradle.taskGraph.whenReady {taskGraph ->
+      if (taskGraph.hasTask(release)) {
+        version = '1.0'
+    }  else { 
+        version = '1.0-SNAPSHOT'
+    }
+}
+
+task list << {
+    File srcDir
+    // Create a file collection using a closure
+    collection = files { srcDir.listFiles() }
+    srcDir = file(new File( 'src') )
+    println "Contents of $srcDir.name"
+    collection.collect { relativePath(it) }.sort().each { println it }
+   // srcDir = file(new File( 'src2') )
+    //println "Contents of $srcDir.name"
+    //collection.collect { relativePath(it) }.sort().each { println it }
+}
+
+task('copy', type: Copy) {
+    from(file('srcDir')) 
+    into(buildDir)
+}
+
+
+
+
+
+
+
+
+

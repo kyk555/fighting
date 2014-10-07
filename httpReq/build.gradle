@@ -1,0 +1,9 @@
+
+// 将构建完的apk 发布到指定仓库
+
+// 通知NDTest到指定位置获取测试apk和测试脚本
+//简单的http请求任务
+task hello {
+ def httpRespon = new URL( 'http://www.baidu.com' ).text
+ println httpRespon
+}
